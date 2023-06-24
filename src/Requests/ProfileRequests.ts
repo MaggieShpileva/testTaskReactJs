@@ -39,7 +39,6 @@ export const Ibonus = async (access_token: string) => {
         },
       }
     );
-    console.log(data);
     return data;
   } catch (e) {
     console.log(e);
