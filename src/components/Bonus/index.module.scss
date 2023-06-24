@@ -1,0 +1,75 @@
+@import "../../styles/color.scss";
+@import "../../styles/mixins.scss";
+
+.container {
+  position: absolute;
+  top: 76px;
+  left: 20px;
+  width: 335px;
+  height: 105px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 16px;
+  background-color: $base-white;
+  padding: 18px 20px 19px 20px;
+  box-sizing: border-box;
+
+  .headline {
+    text-align: left;
+
+    h1 {
+      @include font-title;
+    }
+  }
+
+  .subhead {
+    display: flex;
+    flex-direction: row;
+    color: $base-font-grey;
+
+    p {
+      @include font-description;
+    }
+
+    p:first-child {
+      position: relative;
+      margin-right: 29px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 2px;
+        right: -20px;
+        width: 13px;
+        height: 17px;
+        background-image: url("../../images/fire.svg");
+        background-size: contain;
+      }
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 39px;
+    right: 18px;
+    width: 35px;
+    height: 35px;
+    background-color: $base-white;
+    border-radius: 100%;
+    border: 1px solid $base-pink;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      margin-left: -2px;
+      width: 7px;
+      height: 7px;
+      border-top: 1px solid $base-pink;
+      border-right: 1px solid $base-pink;
+      transform: rotate(45deg);
+    }
+  }
+}

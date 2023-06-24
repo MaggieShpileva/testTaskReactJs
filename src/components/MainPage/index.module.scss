@@ -1,0 +1,13 @@
+@import "../../styles/color.scss";
+@import "../../styles/mixins.scss";
+
+.container {
+  position: relative;
+  width: 375px;
+  margin: 0 auto;
+
+  .bg {
+    height: 148px;
+    background: $base-pink;
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../styles/color.scss";
+@import "../../styles/mixins.scss";
+
+.container {
+  width: inherit;
+  height: 132px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 28px 76px 25px;
+  box-sizing: border-box;
+
+  .logo {
+    @include font-description;
+
+    text-transform: uppercase;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    background-image: url("../../images/icon.svg");
+  }
+}
